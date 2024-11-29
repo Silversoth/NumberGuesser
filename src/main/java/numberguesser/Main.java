@@ -215,7 +215,7 @@ public class Main {
      * @throws IOException If an input or output exception occurs
      */
     public static void save(Set<Player> playerList) throws IOException {
-        File scoreboard = new File("scoreboard.txt");
+        File scoreboard = new File("scoreboard.dat");
         if (!Files.exists(scoreboard.toPath())) {
             Files.createFile(scoreboard.toPath());
         }
@@ -271,7 +271,7 @@ public class Main {
      */
     public static Set<Player> load() throws IOException {
         Set<Player> playerList = new HashSet<>();
-        File scoreboard = new File("scoreboard.txt");
+        File scoreboard = new File("scoreboard.dat");
         if (!Files.exists(scoreboard.toPath())) {
             Files.createFile(scoreboard.toPath());
         }
