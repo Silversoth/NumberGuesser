@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.silversoth.number-guesser</groupId>
+    <groupId>com.github.silversoth</groupId>
     <artifactId>number-guesser</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -19,12 +19,12 @@
         <repository>
             <id>github</id>
             <name>Number-Guesser-Release-Repository</name>
-            <url>https://github.com/Silversoth/number-guesser</url>
+            <url>https://maven.pkg.github.com/Silversoth/number-guesser</url>
         </repository>
         <snapshotRepository>
-            <id>your-snapshot-repository-id</id>
-            <name>Your Snapshot Repository Name</name>
-            <url>your-snapshot-repository-url</url>
+            <id>github</id>
+            <name>Number-Guesser-Snapshot-Repository</name>
+            <url>https://maven.pkg.github.com/Silversoth/number-guesser</url>
         </snapshotRepository>
     </distributionManagement>
 
