@@ -1,4 +1,4 @@
-package numberguesser;
+package numberguesser.model;
 //RANDOM NUMBER GENERATOR CLASS
 
 import java.util.Random;
@@ -7,9 +7,9 @@ import java.util.Random;
  * The `RNG` class is responsible for generating a random integer within a specified range.
  */
 public class RNG {
-    int result;
-    int min;
-    int max;
+    private int result;
+    private int min;
+    private int max;
 
     /**
      * Constructs an `RNG` object with a specified minimum and maximum range.
@@ -23,8 +23,18 @@ public class RNG {
         this.result = Math.abs(r.nextInt(max - min) + min);
         this.min = min;
         this.max = max;
-
     }
 
+    public int getResult() {
+        return result;
+    }
+
+    public int getMin() {
+        return min;
+    }
+
+    public int getMax() {
+        return max;
+    }
 }
 

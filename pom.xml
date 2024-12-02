@@ -15,6 +15,19 @@
         <javafx.version>21</javafx.version>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>Number-Guesser-Release-Repository</name>
+            <url>https://github.com/Silversoth/number-guesser</url>
+        </repository>
+        <snapshotRepository>
+            <id>your-snapshot-repository-id</id>
+            <name>Your Snapshot Repository Name</name>
+            <url>your-snapshot-repository-url</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <build>
         <pluginManagement>
             <plugins>
