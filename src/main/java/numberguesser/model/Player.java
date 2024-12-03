@@ -1,9 +1,10 @@
-package numberguesser;
+package numberguesser.model;
 
 import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
+import java.util.Objects;
 
 /**
  * Represents a player in the Number Guesser game.
@@ -79,6 +80,21 @@ public class Player implements Externalizable {
         points3 = (Integer) in.readObject();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Player)) return false;
+        Player player = (Player) o;
+        return Objects.equals(name, player.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+
+
+
     //GETTERS AND SETTERS
 
     /**
@@ -95,7 +111,7 @@ public class Player implements Externalizable {
      *
      * @return The count for difficulty level 1
      */
-    public int getCount1() {
+    public int getEasyCount() {
         return count1;
     }
 
@@ -104,7 +120,7 @@ public class Player implements Externalizable {
      *
      * @param count1 The count to set for difficulty level 1
      */
-    public void setCount1(int count1) {
+    public void setEasyCount(int count1) {
         this.count1 = count1;
     }
 
@@ -113,7 +129,7 @@ public class Player implements Externalizable {
      *
      * @return The count for difficulty level 2
      */
-    public int getCount2() {
+    public int getMediumCount() {
         return count2;
     }
 
@@ -122,7 +138,7 @@ public class Player implements Externalizable {
      *
      * @param count2 The count to set for difficulty level 2
      */
-    public void setCount2(int count2) {
+    public void setMediumCount(int count2) {
         this.count2 = count2;
     }
 
@@ -131,7 +147,7 @@ public class Player implements Externalizable {
      *
      * @return The count for difficulty level 3
      */
-    public int getCount3() {
+    public int getHardCount() {
         return count3;
     }
 
@@ -140,7 +156,7 @@ public class Player implements Externalizable {
      *
      * @param count3 The count to set for difficulty level 3
      */
-    public void setCount3(int count3) {
+    public void setHardCount(int count3) {
         this.count3 = count3;
     }
 
@@ -149,7 +165,7 @@ public class Player implements Externalizable {
      *
      * @return The points for difficulty level 1
      */
-    public int getPoints1() {
+    public int getEasyPoints() {
         return points1;
     }
 
@@ -158,7 +174,7 @@ public class Player implements Externalizable {
      *
      * @param points1 The points to set for difficulty level 1
      */
-    public void setPoints1(int points1) {
+    public void setEasyPoints(int points1) {
         this.points1 = points1;
     }
 
@@ -167,7 +183,7 @@ public class Player implements Externalizable {
      *
      * @return The points for difficulty level 2
      */
-    public int getPoints2() {
+    public int getMediumPoints() {
         return points2;
     }
 
@@ -176,7 +192,7 @@ public class Player implements Externalizable {
      *
      * @param points2 The points to set for difficulty level 2
      */
-    public void setPoints2(int points2) {
+    public void setMediumPoints(int points2) {
         this.points2 = points2;
     }
 
@@ -185,7 +201,7 @@ public class Player implements Externalizable {
      *
      * @return The points for difficulty level 3
      */
-    public int getPoints3() {
+    public int getHardPoints() {
         return points3;
     }
 
@@ -194,7 +210,7 @@ public class Player implements Externalizable {
      *
      * @param points3 The points to set for difficulty level 3
      */
-    public void setPoints3(int points3) {
+    public void setHardPoints(int points3) {
         this.points3 = points3;
     }
 }
